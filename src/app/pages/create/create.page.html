@@ -11,44 +11,31 @@
   <form [formGroup]="createSongForm" (submit)="createSong()">
     <ion-item>
       <ion-label stacked>Nombre de la cancion</ion-label>
-      <ion-input
-        formControlName="songName"
-        type="text"
-       
-      >
+      <ion-input formControlName="songName" type="text">
       </ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label stacked>Nombre del artista</ion-label>
-      <ion-input
-        formControlName="artistName"
-        type="text"
-        
-      >
+      <ion-input formControlName="artistName" type="text">
       </ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label stacked>Nombre del album</ion-label>
-      <ion-input
-        formControlName="albumName"
-        type="text"
-       
-      >
+      <ion-input formControlName="albumName" type="text">
       </ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label stacked>Descripcion de la cancion</ion-label>
-      <ion-textarea
-        formControlName="songDescription"
-        type="text"
-        placeholder="cual es el significado de la canción"
-      >
+      <ion-textarea formControlName="songDescription" type="text" placeholder="cual es el significado de la canción">
       </ion-textarea>
     </ion-item>
-
+    <ion-item>
+      <ion-label>Esperar si funciona</ion-label>
+      <ion-button (click)="pickImage()">Pick Image</ion-button>
+    </ion-item>
     <ion-button expand="block" type="submit" [disabled]="!createSongForm.valid">
       Add Song
     </ion-button>

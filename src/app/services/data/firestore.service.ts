@@ -13,7 +13,8 @@ export class FirestoreService {
     albumName: string,
     artistName: string,
     songDescription: string,
-    songName: string
+    songName: string,
+    songImage: string
   ){ 
     const id = this.firestore.createId();
 
@@ -23,6 +24,7 @@ export class FirestoreService {
       artistName,
       songDescription,
       songName,
+      songImage,
     });
   }
 
@@ -36,5 +38,10 @@ export class FirestoreService {
 
   deleteSong(songId: string): Promise<void> {
     return this.firestore.doc(`songList/${songId}`).delete();
+  }
+
+  updateSong(nota){
+    return this.firestore.doc(`songList/${nota.id}`).update(nota
+    );
   }
 }

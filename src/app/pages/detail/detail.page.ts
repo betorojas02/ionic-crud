@@ -25,7 +25,7 @@ export class DetailPage implements OnInit {
     this.songId = this.route.snapshot.paramMap.get('id');
     this.song = this.firestoreService.getSongDetail(this.songId).valueChanges();
 
-    console.log("datos que traigo de firebase",this.song);
+ 
   }
   async deleteSong() {
     const alert = await this.alertController.create({
@@ -35,7 +35,7 @@ export class DetailPage implements OnInit {
           text: 'Cancel',
           role: 'cancel',
           handler: blah => {
-            console.log('Confirm Cancel: blah');
+          
           },
         },
         {

@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button> mierda me tire este inico </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-item>
+      <ion-label stacked>Nombre de la cancion </ion-label>
+      <ion-input
+        
+        type="text"
+        [(ngModel)]="songs.songName"
+      >
+      </ion-input>
+    </ion-item>
+
+     <ion-item>
+      <ion-label stacked>Nombre del artista</ion-label>
+      <ion-input
+      
+        type="text"
+        [(ngModel)]="songs.artistName"
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Nombre del album</ion-label>
+      <ion-input
+        
+        type="text"
+        [(ngModel)]="songs.albumName"
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Descripcion de la cancion</ion-label>
+      <ion-textarea
+        
+        type="text"
+        placeholder="cual es el significado de la canción"
+        [(ngModel)]="songs.songDescription"
+      >
+      </ion-textarea>
+    </ion-item>
+
+   
+
+    <ion-button (click)="updateSong()" >
+      Edit Song
+    </ion-button>
+ 
+</ion-content>

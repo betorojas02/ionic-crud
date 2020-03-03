@@ -12,13 +12,17 @@
 <ion-content padding fullscreen>
   <ion-card
     *ngFor="let song of songList | async"
-    routerLink="/detail/{{song.id}}"
-  > <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Escudo_de_Millonarios_F%C3%BAtbol_Club.svg/600px-Escudo_de_Millonarios_F%C3%BAtbol_Club.svg.png" />
-    <ion-card-header>
+  
+  > <img   routerLink="/detail/{{song.id}}" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Escudo_de_Millonarios_F%C3%BAtbol_Club.svg/600px-Escudo_de_Millonarios_F%C3%BAtbol_Club.svg.png" />
+    <ion-card-header   routerLink="/detail/{{song.id}}">
       {{ song.songName }}
     </ion-card-header>
-    <ion-card-content>
+    <ion-card-content   routerLink="/detail/{{song.id}}">
       Artist Name: {{ song.artistName }}
     </ion-card-content>
+
+    <button ion-button clear routerLink="/edit/{{song.id}}">
+      <ion-icon name="create" style="zoom:2.0"></ion-icon>
+    </button>
   </ion-card>
 </ion-content>
